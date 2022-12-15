@@ -1,0 +1,165 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: palevioletred;
+}
+/* content*/
+.wrraper{
+   background-color: whitesmoke;
+   border-radius: 7px;
+   padding: 28px 28px 45px;
+   width: 420px;
+   height: 50vh;
+}
+ /* for heading*/
+.wrraper header{
+    font-size: 28px;
+    font-weight: 700;
+    text-align: center;
+    font-family: sans-serif;
+}
+/* for search bar*/
+.wrraper .search{
+    margin: 35px 0 18px;
+    position: relative;
+}
+.search input{
+    height: 53px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    padding: 0 42px;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+.search :where(i,span){
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: lightgray;
+}
+/* for search icon*/
+.search i{
+    left: 18px;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.search span {
+    right: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: none;
+}
+.search input:focus{
+    border: 2px solid black;
+}
+.search input:focus ~i{
+    color: black;
+}
+.search input:valid ~span{
+    display: block;
+}
+/* for words*/
+.wrraper ul li{
+    display: flex;
+    padding-bottom: 17px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid lightgrey;
+    align-items: center;
+    justify-content: space-between;
+
+}
+ul .word p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 20px;
+}
+ul .word span{
+    font-size: 12px;
+    color: grey
+}
+ul .word i{
+    cursor: pointer;
+    font-size: 15px;
+    color: gray
+}
+ul li:last-child{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+}
+.content li .details{
+    padding-left: 10px;
+    border-left: 3px solid greenyellow;
+    border-radius: 4px 0 4px;
+}
+
+.content li .details p{
+    font-size: 17px;
+    font-weight: 500;
+}
+.content li .details span{
+    font-size: 15px;
+    color: grey;
+}
+.synonyms .details .list{
+    display: flex;
+    flex-wrap:wrap;
+
+}
+.synonyms .details .list span{
+    cursor: pointer;
+    text-decoration: underline;
+    margin-right: 5px;
+
+}
+
+.wrraper ul{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+.wrraper .info-text{
+    font-size: 13px;
+    color: lightslategray;
+    margin: -3px 0 -10px;
+
+}
+.info-text span{
+    font-weight: 600;
+}
+.wrraper .active .info-text{
+    display: none;
+}
+.wrraper.active ul{
+    height: 303px;
+    opacity: 1;
+}
+ul .content{
+    max-height: 215px;
+    overflow-y: auto;
+}
+ul .content ::-webkit-scrollbar{
+    width:0px
+}
+
+/* Responsive only for andriod phone only*/
+@media screen and (max-width:500px) {
+  .wrraper{
+    width: 350px;
+  }
+    
+}
+
+    
+    
