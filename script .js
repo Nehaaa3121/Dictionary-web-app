@@ -60,7 +60,7 @@ removeIcon.addEventListener("click", ()=>{
     searchInput.focus();
     wrapper.classList.remove("active");
     infoText.style.color = "#9A9A9A";
-    infoText.innerHTML = "Type any existing word and press enter to get meaning.";
+    infoText.innerHTML = "Type any existing word and press enter to get the meaning.";
 });
 
 

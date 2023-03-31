@@ -8,7 +8,13 @@ body{
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: palevioletred;
+    background-image: url(./5559852.jpg);
+    background-position: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
 }
 /* content*/
 .wrraper{
